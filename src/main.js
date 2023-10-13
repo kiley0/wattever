@@ -16,9 +16,8 @@ function startMainLoop() {
 }
 
 function tick() {
-  if (technologies.autoCrankEnabled && gameStats.bankBalanceDollars > 0.5) {
+  if (technologies.autoCrankEnabled) {
     crankGenerator();
-    gameStats.bankBalanceDollars -= 0.5;
   }
   updateDisplay();
 }

@@ -3,11 +3,16 @@ import { updateDisplay } from "./render";
 
 const MANUAL_CRANK_ENERGY_GENERATED_WH = 1;
 export function crankGenerator() {
-  gameStats.storedEnergyWattHours +=
-    MANUAL_CRANK_ENERGY_GENERATED_WH *
-    gameStats.crankMultiplier *
-    gameStats.population;
-  updateDisplay();
+  if (gameStats.bankBalanceDollars > 0.5) {
+    gameStats.bankBalanceDollars -= 0.5;
+
+    gameStats.storedEnergyWattHours +=
+      MANUAL_CRANK_ENERGY_GENERATED_WH *
+      gameStats.crankMultiplier *
+      gameStats.population;
+
+    updateDisplay();
+  }
 }
 
 export function toggleAutoCrank() {
