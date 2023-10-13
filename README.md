@@ -1,2 +1,3 @@
-# wattever
-An incremental game in the browser where the player captures energy, stores it, and sells it for people to use.
+# Wattever
+
+An incremental game inspired by Universal Paperclips, where you must capture or generate energy in order to keep up as demand and population increase.

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wattever</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container">
+    <h1>Wattever</h1>
+    <p>Capture energy, store it, and use it.</p>
+
+    <div class="row">
+      <div class="col">
+        <h2>Stats</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Stored Energy</td>
+              <td class="text-right" id="storedEnergyWattHours"></td>
+            </tr>
+            <tr>
+              <td>Population</td>
+              <td class="text-right" id="population"></td>
+            </tr>
+            <tr>
+              <td>Energy Demand Per Day</td>
+              <td class="text-right" id="energyUsagePerDay"></td>
+            </tr>
+            <tr>
+              <td>Price Per kWh</td>
+              <td class="text-right" id="pricePerKwh"></td>
+            </tr>
+            <tr>
+              <td>Time Elapsed</td>
+              <td class="text-right" id="timeElapsedDays"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <h2>Bank</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Balance</td>
+              <td class="text-right" id="bankBalanceDollars"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <h2>Technologies</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>Auto Crank</td>
+              <td class="text-right" id="autoCrankEnabled"></td>
+            </tr>
+            <tr>
+              <td>Crank Multiplier</td>
+              <td class="text-right" id="crankMultiplier"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <h2>Actions</h2>
+        <button class="button" id="crankGeneratorButton">Manual Crank</button>
+        <button class="button is-hidden" id="autoCrankButton">
+          Auto Crank ($0.50 / crank)
+        </button>
+        <button class="button is-hidden" id="increaseCrankMultiplierButton">
+          Increase Crank Multiplier ($100)
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
